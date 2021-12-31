@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main()
+{
+    int number,sum=0 , tem, rev=0;
+    printf("enter the Number :",number);
+    scanf("%d",&number);
+    
+    tem=number;
+    
+    while(tem>0){
+     int k=tem%10;
+     rev *=10;
+     rev += k;
+     tem /=10;
+  
+    }
+    
+    int first = number % 10;
+    int last = rev % 10;
+printf("Sum is %d",first + last);
+    return 0;
+}
