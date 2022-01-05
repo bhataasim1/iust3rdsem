@@ -1,0 +1,28 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    float cost_price, selling_price, profit, loss;
+    
+    cout<<"Enter the cost Price of item : ";
+    cin >> cost_price;
+    cout<<"Enter the Selling Price of items : ";
+    cin >> selling_price;
+    
+    if(selling_price > cost_price){
+        
+    profit = selling_price - cost_price;
+    cout<<"Profit made on item : " << profit;
+    }
+    else if (selling_price < cost_price)
+    {
+    loss = cost_price - selling_price;
+    cout<< "Loss Incurred on Item : "<< loss;
+    }
+  else
+  cout << "Neither Loss Nor Profit" ;
+   
+    return 0;
+}
