@@ -1,0 +1,27 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int num,temp,r_num=0;
+    cout << "Enter Number : ";
+    cin >> num;
+    
+    temp = num;
+    
+    while(num !=0)
+    {
+        r_num = r_num * 10;
+        r_num = num % 10 + r_num ;
+        num = num / 10;
+    }
+    cout  << " Reverse number is : "  << r_num ;
+    
+    if(temp == r_num)
+    cout  <<"\n The original and reversed numbers are equal"  ;
+    else
+    cout  <<"\n The original and reversed numbers are not equal";
+
+    return 0;
+}
