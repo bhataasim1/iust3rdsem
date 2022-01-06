@@ -1,0 +1,27 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a1,a2,a3, sum;
+    cout << "Enter the First Angle : ";
+    cin >> a1;
+    
+     cout << "Enter the Second Angle : ";
+    cin >> a2;
+    
+     cout << "Enter the Third Angle : ";
+    cin >> a3;
+    
+    sum = a1+a2+a3;
+    
+    if ( sum == 180)
+    {
+        cout << "This is a Valid Traingle"; 
+    }
+    else
+    cout << "This is not a Valid Traingle";
+
+    return 0;
+}
