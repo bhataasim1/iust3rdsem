@@ -1,0 +1,16 @@
+#include <iostream>
+#include <stdlib.h> // here i used the "stdlib" header file to use abs() function
+using namespace std;
+
+int main()
+{
+    int num , a;
+    
+    cout << "Enter the Number Whose Absolute Value you want : ";
+    cin >> num;
+    
+    a= abs ( num ); // used abs() function to find absolute value
+    
+    cout <<  " The Absolute value of " << num << "  is  " << a;
+    return 0;
+}
