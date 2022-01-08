@@ -1,0 +1,28 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main()
+{
+    float x , y;
+    
+    cout << " Enter the Ponts on X-axis and Y-axis : ";
+    cin >> x >> y ;
+    
+    if ( x == 0 && y != 0)
+    {
+        cout << " Points (" <<x <<","<< y << ") lies on Y-axis";
+    }
+    else if (y == 0 && x != 0)
+    {
+        cout << " Points (" <<x <<","<< y << ") lies on X-axis";
+    }
+    else if ( x == 0 && y == 0)
+    {
+        cout << " Points (" <<x <<","<< y << ") lies at Origin";
+    }
+    else
+    cout << "Point neither lies on X-axis nor on Y-axis";
+
+    return 0;
+}
