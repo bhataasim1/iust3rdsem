@@ -1,0 +1,37 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main()
+{
+    int x1 , y1, x2 , y2, x3, y3;
+    double ab, bc , ac , abc;
+    
+    cout << "Enter The Values of  (X1 , Y1) : ";
+    cin >> x1 >> y1 ;
+    
+    cout << "Enter The Values of  (X2 , Y2) : ";
+    cin >> x2 >> y2 ;
+    
+    cout << "Enter The Values of  (X3 , Y3) : ";
+    cin >> x3 >> y3 ;
+    
+    ab = sqrt (pow(x2 - x1 ,2) + pow(y2 - y1, 2));
+    bc = sqrt (pow(x3 - x2 ,2) + pow(y3 - y2, 2));
+    ac = sqrt (pow(x3 - x1 ,2) + pow(y3 - y1, 2));
+    
+    cout << "\n ab : " << ab << "\n bc : " << bc << "\n ac : " << ac ;
+    
+    abc = ab + bc;
+    
+    if (abc == ac)
+    {
+        cout << "\n ab + bc = ac";
+        cout << "\n All the three points fall on one straight line.";
+    }
+    
+    else
+       cout << " \n All the three points are not present on one straight line.";
+
+    return 0;
+}
