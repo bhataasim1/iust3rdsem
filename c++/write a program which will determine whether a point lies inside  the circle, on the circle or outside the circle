@@ -1,0 +1,33 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main()
+{
+    float x , y , radius , pc;
+    
+    cout << "Enter the Radius : ";
+    cin >> radius;
+    
+    cout << "Enter the Point Coordinates of Circle (X , Y ) ";
+    cin >> x >> y;
+    
+    pc = sqrt ( pow ( x ,2 ) + pow ( y , 2 ));
+    
+    if (pc < radius)
+    {
+        cout << "points (" << x << ","<< y << ") lies inside the Circle";
+    }
+    else if (pc > radius)
+    {
+        cout << "point (" << x << "," << y << ") lies outside the Circle";
+    }
+    else if( pc == radius)
+    {
+        cout << "point (" << x << "," << y << ") lies on the Boundary of the Circle";
+    }
+    else
+        cout << " Wrong entry";
+
+    return 0;
+}
