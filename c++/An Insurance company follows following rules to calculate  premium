@@ -1,0 +1,44 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    char health , sex , area;
+    int age;
+    
+    cout << "Enter the Health Condition (E / P) : "; // Here "E" is Excellent and "P" is Poor
+    cin >> health;
+    
+    cout << "Enter Your Sex ( M / F ) : ";   //Here "M" is Male and "F" is Female
+    cin >> sex;
+    
+    cout << "Enter Your Area ( C / V ) : ";  //Here "C" is city and "V" is Village
+    cin >> area;
+    
+    cout << "Enter your Age : ";
+    cin >> age;
+    
+    if ( health == 'E' && sex == 'M' && area == 'C' && age >= 25 && age <= 35)
+    {
+        cout << "\n Insured";
+        cout << "\n Premium is : 4 per Thousand";
+        cout << "\n Maximum Policy Amount : 2 Lakh";
+    }
+    else if(health == 'E' && sex == 'F' && area == 'C' && age >= 25 && age <= 35)
+    {
+        cout << "\n Insured";
+        cout << "\n Premium is : 3 per Thousand";
+        cout << "\n Maximum Policy Amount : 1 Lakh";
+    }
+    else if ( health == 'P' && sex == 'M' && area == 'V' && age >= 25 && age <= 35 )
+    {
+        cout << "\n Insured";
+        cout << "\n Premium is : 6 per Thousand";
+        cout << "\n Maximum Policy Amount : 10,000 Thousand";
+    }
+    else
+        cout << "\n Not Insured";
+
+    return 0;
+}
