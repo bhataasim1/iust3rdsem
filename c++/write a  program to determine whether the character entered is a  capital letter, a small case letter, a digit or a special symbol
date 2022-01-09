@@ -1,0 +1,37 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    char ch;
+    int ascii;
+    
+    cout << "Enter the Character : ";
+    cin >> ch;
+    
+    ascii = ch;
+    
+    cout << "Ascii Value of " << ch << " is " << ascii ;
+    
+    if (ascii >= 65 && ascii <= 90)
+    {
+        cout <<"\n"<< ch << " is a Capital Letter ";
+    }
+    else if (ascii >= 97 && ascii <= 122)
+    {
+        cout <<"\n"<< ch << " is a Small Letter ";
+    }
+    else if (ascii >= 48 && ascii <= 57)
+    {
+        cout <<"\n"<< ch << " is a Digit";
+    }
+    else if(ascii >= 0 && ascii <= 47 || ascii >= 58 && ascii <= 64 || ascii >= 91 && ascii <= 96 || ascii >= 123 && ascii <= 127)
+    {
+        cout <<"\n"<< ch << " ia a Special Symbol";
+    }
+    else
+    cout << "Invalid";
+
+    return 0;
+}
