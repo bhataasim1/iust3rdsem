@@ -1,0 +1,42 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    float hardness , carbon , tensile_strength;
+    
+    cout << "Enter the Hardness : ";
+    cin >> hardness;
+    
+    cout << "Enter the Carbon Content : ";
+    cin >> carbon;
+    
+    cout << "Enter the Tensile Strength : ";
+    cin >> tensile_strength;
+    
+    if(hardness > 50 && carbon < 0.7 && tensile_strength > 5600 )
+    {
+        cout << "The Grade of steel is 10";
+    }
+    else if ( hardness > 50 && carbon < 0.7 && tensile_strength < 5600 )
+    {
+        cout << "The Grade of steel is 9";
+    }
+    else if (hardness < 50 && carbon < 0.7 && tensile_strength > 5600)
+    {
+        cout << "The Grade of steel is 8";
+    }
+    else if (hardness > 50 && carbon > 0.7 && tensile_strength > 5600)
+    {
+        cout << "The Grade of steel is 7";
+    }
+    else if (hardness > 50 || carbon < 0.7 || tensile_strength > 5600)
+    {
+        cout << "The Grade of steel is 6";
+    }
+    else
+        cout << "The Grade of steel is 5";
+
+    return 0;
+}
