@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int side1 , side2, side3;
+    cout << "Enter the First Side of Traingle";
+    cin >> side1;
+    
+    cout << "Enter the Second Side of Traingle";
+    cin >> side2;
+    
+    cout << "Enter the Third Side of Traingle";
+    cin >> side3;
+    
+    if ( (side1 + side2 > side3) && (side2 + side3 > side1) && (side1 + side3 > side2))
+    {
+        cout << "Traingle is Valid";
+    }
+    else
+        cout << "Traingle is Invalid";
+
+    return 0;
+}
