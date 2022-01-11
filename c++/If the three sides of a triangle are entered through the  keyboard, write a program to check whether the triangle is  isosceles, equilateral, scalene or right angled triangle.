@@ -1,0 +1,33 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int angle1 , angle2 , angle3;
+    cout << "Enter the First angle of Traingle : ";
+    cin >> angle1;
+    
+    cout << "Enter the Second angle of Traingle : ";
+    cin >> angle2;
+    
+    cout << "Enter the Third angle of Traingle : ";
+    cin >> angle3;
+    
+    if (angle1 == angle2 && angle2 == angle3)
+    {
+        cout << "The Traingle is Equilateral";
+    }
+    else if (angle1 == 90 || angle2 == 90 || angle3 == 90)
+    {
+        cout << "The Traingle is Right Angled Traingle";
+    }
+    else if ( angle1 == angle2 || angle2 == angle3 || angle1 == angle3)
+    {
+        cout << "The Traingle is Isosceles Triangle";
+    }
+    else
+      cout << "The Traingle is Scalene Triangle";
+
+    return 0;
+}
