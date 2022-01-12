@@ -1,0 +1,30 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    float a , b;
+    cout << "Enter Percentage in Subject A : ";
+    cin >> a;
+    
+    cout << "Enter Percentage in Subject B : ";
+    cin >> b;
+    
+    if ( a >= 55 && b >= 45)
+    {
+        cout << "Student is Passed";
+    }
+    else if (a >= 45 && a <= 55 && b >= 55)
+    {
+        cout << "Student is Passed";
+    }
+    else if (a >= 65 && b < 45)
+    {
+        cout << "Apply for Reappear in Subject B";
+    }
+    else
+       cout << "Student is Failed";
+    
+    return 0;
+}
