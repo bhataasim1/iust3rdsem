@@ -1,0 +1,27 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    float hour;
+    cout << "Time Spend to Complate a particular Job : ";
+    cin >> hour;
+    
+    if (hour >= 2 && hour <= 3)
+    {
+        cout << "Highly Efficient";
+    }
+    else if (hour >= 3 && hour <= 4)
+    {
+        cout << "Improve Your Speed";
+    }
+    else if(hour >= 4 && hour <= 5)
+    {
+        cout << "You Need Training";
+    }
+    else
+    cout << "You have to Leave the Company";
+    
+    return 0;
+}
