@@ -1,0 +1,27 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int order , stock=100;
+    char credit;
+    cout << "Enter your Order : ";
+    cin >> order;
+    
+    cout << "Is Your Credits Good? (Y/N) : ";
+    cin >> credit;
+    
+    if (order <= stock && (credit == 'Y' || credit == 'y'))
+    {
+        cout << "Order of " << order << " has been Shipped";
+    }
+    else if ( stock < order && (credit == 'Y' || credit == 'y'))
+    {
+        cout << "Order of " << stock << " is Shipped, Remaining " << order - stock << " will be shipped soon";
+    }
+    else
+       cout << " Please Clear Your Balance ";
+
+    return 0;
+}
