@@ -1,40 +1,46 @@
+/*
+Name - Aasim Ashraf Bhat
+Roll No - CSE-20-LE-63
+*/
+
 #include <iostream>
 
 using namespace std;
 
 int main()
 {
-    int n;
-    cout << "Enter Number of values: ";
+    int i, n, sum = 0, largest, smallest, t;
+    double average;
+    
+    cout << "Enter the Number of Inputs : " ;
     cin >> n;
-
-    int values[n];
-    cout << "Enter " << n << " values (one per line/space seperated): " << endl;
-    for (int i = 0; i < n; i++)
-        cin >> values[i];
-
-    int smallest, largest;
-    double sum = 0, average;
-
-    smallest = largest = values[0];
-
-    for (int i = 0; i < n; i++)
+    
+    cout << "Enter the Values (One value each Line) :" << endl;
+    
+    for (i = 0; i < n; i++)
     {
-        sum += values[i];
-
-        if (values[i] < smallest)
-            smallest = values[i];
-
-        if (values[i] > largest)
-            largest = values[i];
+        if ( i > 0)
+        {
+             cin >> t;
+             if ( t > largest)
+              largest = t;
+             if ( t < smallest)
+              smallest = t;
+             sum += t;
+        }
+        else
+        {
+            cin >> t;
+            largest = t;
+            smallest = t;
+            sum += t;
+        }
     }
-
     average = sum / n;
-
-    cout << "--------------" << endl;
-    cout << "Smallest: " << smallest << endl;
-    cout << "Largest: " << largest << endl;
-    cout << "Average: " << average << endl;
+    
+    cout << "Largest Values is : " << largest << endl;
+    cout << "Smallest  Values is : " << smallest << endl;
+    cout << "Average  Values is : " << average << endl;
 
     return 0;
 }
