@@ -1,40 +1,26 @@
 #include <iostream>
-#include <cmath>
-
+#include <math.h>
 using namespace std;
 
 int main()
 {
-    int N;
-    cout << "Number of values: ";
-    cin >> N;
-
-    int values[N];
-    cout << "Enter " << N << " values (one per line/space seperated): " << endl;
-    for (int i = 0; i < N; i++)
-        cin >> values[i];
-
-    int smallest, largest;
-    double sum = 0, average, sum_squares = 0, standard_deviation;
-
-    smallest = largest = values[0];
-    for (int i = 0; i < N; i++)
+    int n, i , t;
+    double average, standard_deviation, sum = 0, sum_squares = 0;
+    
+    cout << "Enter the Number of Inputs : ";
+    cin >> n;
+    
+    cout << "Enter the values (One value each Line) : " << endl;
+    
+    for (i = 0; i <= (n - 1); i++)
     {
-        sum += values[i];
-        sum_squares += values[i] * values[i];
-
-        if (values[i] < smallest)
-            smallest = values[i];
-
-        if (values[i] > largest)
-            largest = values[i];
+        cin >> t;
+        sum += t;
+        sum_squares += ( t * t );
     }
+    average = sum / n;
+    standard_deviation = sqrt ((sum_squares / n) - (average * average));
+    cout << "Standard Deviation is : " << standard_deviation;
 
-    average = sum / N;   
-    standard_deviation = sqrt((sum_squares/N) - (average * average));
-
-    cout << "--------------" << endl;
-    cout << "Range: [" << smallest << ", " << largest << "]" << endl;
-    cout << "Standard Deviation: " << standard_deviation << endl;
     return 0;
 }
