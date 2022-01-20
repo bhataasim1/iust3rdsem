@@ -4,54 +4,48 @@ using namespace std;
 
 int main()
 {
-    int N;
-    cout << "Number of days: ";
-    cin >> N;
-
-    int temperatures[N];
-    cout << "Enter " << N << " values (one per line/space seperated): " << endl;
-    for (int i = 0; i < N; i++)
-        cin >> temperatures[i];
-
-    cout << "------------------" << endl;
-
-    int hot_days_count = 0, pleasant_days_count = 0, cold_days_count = 0;
-    double sum = 0, average;
-
-    for (int i = 0; i < N; i++)
+    int n;
+    cout << "Enter the Number of Days : ";
+    cin >> n;
+    
+    int temprature[n];
+    cout << "Enter " << n << "Temprature Values (one per Line) : " << endl;
+    for (int i = 0; i < n; i++)
+    cin >> temprature[i];
+    
+    int hot_days = 0, cold_days = 0, pleasent_days = 0;
+    double sum =0, average_temp;
+    
+    for (int i = 0; i < n; i++)
     {
-        sum += temperatures[i];
-
-        cout << temperatures[i] << " F ---> ";
-
-        if (temperatures[i] >= 85)
+        sum += temprature[i];
+        cout << temprature[i];
+        
+        if ( temprature[i] >= 85)
         {
-            cout << "Hot";
-            hot_days_count++;
+            cout << " Hot Day" <<endl;
+            hot_days++;
         }
-        else if (temperatures[i] >= 60 && temperatures[i] <= 84)
+        else if ( temprature[i] >= 60 && temprature[i] < 85)
         {
-            cout << "Pleasant";
-            pleasant_days_count++;
+            cout << " Pleasent Day" <<endl;
+            pleasent_days++;
         }
-        else if (temperatures[i] < 60)
+        else if ( temprature[i] < 60)
         {
-            cout << "Cold";
-            cold_days_count++;
+            cout << " Cold Day" <<endl;
+            cold_days++;
         }
-
-        cout << " day" << endl;
+        else 
+            cout << "Days";
     }
-
-    average = sum / N;
-    cout << "------------------" << endl;
-
-    cout << "Hot days: " << hot_days_count << endl;
-    cout << "Pleasant days: " << pleasant_days_count << endl;
-    cout << "Cold days: " << cold_days_count << endl;
-
-    cout << "------------------" << endl;
-    cout << "Average temperature: " << average << " F" << endl;
+    
+    average_temp = sum/n;
+    
+    cout << "Hot days = " << hot_days << endl;
+    cout << "Pleasent days = " << pleasent_days << endl;
+    cout << "Cold days = " << cold_days << endl;
+    cout << "Average Temprature = " << average_temp << endl;
 
     return 0;
 }
