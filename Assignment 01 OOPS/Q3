@@ -9,36 +9,36 @@ int main()
     cin >> n;
     
     int temprature[n];
-    cout << "Enter the Temprature Values : " << endl;
+    cout << "Enter " << n << "Temprature Values (one per Line) : " << endl;
     for (int i = 0; i < n; i++)
     cin >> temprature[i];
     
     int hot_days = 0, cold_days = 0, pleasent_days = 0;
-    for (int i = 0; i< n; i++)
+    for (int i = 0; i < n; i++)
     {
-        cout << temprature[i] ;
+        cout << temprature[i];
         
-        if(temprature[i] >= 85)
+        if ( temprature[i] >= 85)
         {
-            cout << "Hot Day" << endl;
+            cout << " Hot Day" <<endl;
             hot_days++;
         }
-        else if (temprature[i] >= 60 && temprature[i] < 85)
+        else if ( temprature[i] >= 60 && temprature[i] < 85)
         {
-            cout << "Pleasent Day" << endl;
+            cout << " Pleasent Day" <<endl;
             pleasent_days++;
         }
-        else if (temprature[i] < 60)
+        else if ( temprature[i] < 60)
         {
-          cout << "Cold Day" << endl;
-          cold_days++;
+            cout << " Cold Day" <<endl;
+            cold_days++;
         }
-        else
-        cout << "Days";
+        else 
+            cout << "Days";
     }
-    cout << "Hot Days : " << hot_days << endl;
-    cout << "Pleasent Days : " << pleasent_days << endl;
-    cout << "Cold Days : " << cold_days << endl;
+    cout << "Hot days = " << hot_days << endl;
+    cout << "Pleasent days = " << pleasent_days << endl;
+    cout << "Cold days = " << cold_days << endl;
 
     return 0;
 }
