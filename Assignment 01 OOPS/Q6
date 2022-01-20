@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int guests, chairs, arrangement = 1;
+    
+    cout << "Enter the Numeber of Guests : ";
+    cin >> guests;
+    
+    cout << "Enter the Number of Chairs : ";
+    cin >> chairs;
+    
+    for (int i = 1; i <= chairs; i++)
+    {
+        arrangement *= guests;
+        guests--;
+       
+    }
+    cout << "Number of Arrangments Possible : " << arrangement;
+
+    return 0;
+}
