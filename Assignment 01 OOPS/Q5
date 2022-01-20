@@ -1,0 +1,49 @@
+#include <iostream>
+#define TAX 3.625
+using namespace std;
+
+int main()
+{
+    int employee;
+    
+    cout << "Enter  the Number of Employes : ";
+    cin >> employee;
+    
+    double id, wage_rate, hours_worked, gross_pay, overtime_wage, overtime_pay, overtime, net_pay, total_pay = 0, average;
+    
+    for (int i = 0; i < employee; i++)
+    {
+        cout << "Enter the Employee ID : ";
+        cin >> id;
+        
+        cout << "Enter the Wage Rate : ";
+        cin >> wage_rate;
+        
+        cout << "Enter the Hours Worked : ";
+        cin >> hours_worked;
+        
+        if ( hours_worked <= 40)
+        {
+            gross_pay = hours_worked * wage_rate;
+        }
+        else
+        {
+            overtime_wage = 1.5 * wage_rate;
+            overtime_pay = ( hours_worked - 40) * overtime_wage;
+            overtime = hours_worked - 40;
+            gross_pay = ((hours_worked - overtime) * wage_rate) + overtime_pay;
+        }
+        net_pay = gross_pay - (gross_pay * (TAX/100));
+        total_pay += net_pay;
+        
+        cout << "Employee ID : " << id << endl;
+        cout << "Net Pay = " << net_pay << endl;
+    }
+    
+    average = total_pay / employee;
+    
+    cout << "Total Pay = " << total_pay << endl;
+    cout << "Average Pay = " << average <<endl;
+
+    return 0;
+}
