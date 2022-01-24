@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int num, i;
+    cout << "All Prime Numbers from 1 to 300 are " << endl;
+    
+    for ( num = 2; num <= 300; num++)
+    {
+        for (i = 2; i < num; i++)
+        {
+            if (num % i == 0)
+            break;
+        }
+        if (i == num)
+        cout << num << endl;
+    }
+    
+    return 0;
+}
