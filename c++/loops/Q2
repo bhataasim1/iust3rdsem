@@ -1,0 +1,14 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    char ch=1; //ASCII value is 1
+    
+    for (int i = 0; i <= 2000; i++)
+    {
+        cout << ch ;
+    }
+     getch();
+}
