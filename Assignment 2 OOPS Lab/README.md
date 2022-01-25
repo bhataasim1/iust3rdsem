@@ -23,7 +23,9 @@
    |18.5 - 24.9 | Normal |
    |25.0 - 29.96 | Overweight |
    |30.0 and Above | Obese |
+   
    To calculate BMI based on weight in pounds ( wt_lb ) and height in inches ( ht_in ), use this formula (rounded to tenths):
+   
    <pre>
    703 * wt_lb /ht_in2
    </pre>
