@@ -1,0 +1,27 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    float purchase;
+    char ch;
+    
+    cout << "Enter the Purchase Amount : ";
+    cin >> purchase;
+    
+    cout << "Is the person Teacher (Y / N) : ";
+    cin >>ch;
+    
+    cout << "Total Purchase = $" << purchase <<endl;
+    if (ch == 'y' || ch == 'Y')
+    {
+        cout << "Teachers Discount (12%) " << purchase*0.12 << endl;
+        cout << "Discounted Total " << purchase*0.88 << endl;
+        purchase = purchase*0.88;
+    }
+     cout << "Sales Tax (5%) " << purchase * 0.05 << endl;
+     cout << "Total $" << purchase * 1.05 <<endl;
+
+    return 0;
+}
