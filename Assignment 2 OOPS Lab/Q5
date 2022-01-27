@@ -1,0 +1,107 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    char pollutant;
+    cout << " (1) Carbon monoxide \n (2) Hydrocarbons \n (3) Nitrogen oxides \n (4) Nonmethane hydrocarbons" << endl;
+    
+    cout << "Enter the Pollutant Number : ";
+    cin >> pollutant;
+    
+    float grams_per_mile, table_value;
+    int odometer_reading;
+    
+    cout << "Enter number of Grams emitted per mile : ";
+    cin >> grams_per_mile;
+    
+    cout << "Enter Odometer reading : ";
+    cin >> odometer_reading;
+    
+    if ( pollutant == '1' && odometer_reading < 50000)
+    {
+        table_value = 3.4;
+        
+        if (grams_per_mile > table_value)
+        {
+            cout << "Emissions exceed permitted level of 3.4 grams/mile" <<endl;
+        }
+        else
+            cout << "Looks like you're good" << endl;
+    }
+    else if (pollutant == '2' && odometer_reading < 50000)
+    {
+        table_value = 0.31;
+        if (grams_per_mile > table_value)
+        {
+            cout << "Emissions exceed permitted level of 0.31 grams/mile" << endl;
+        }
+        else 
+            cout << "Looks like you're good" << endl;
+    }
+    else if (pollutant == '3' && odometer_reading < 50000)
+    {
+        table_value = 0.4;
+        if (grams_per_mile > 0.4)
+        {
+            cout << "Emissions exceed permitted level of 0.34 grams/mile" << endl;
+        }
+        else
+            cout << "Looks like you're good" << endl;
+    }
+    else if (pollutant == '4' && odometer_reading < 50000)
+    {
+        table_value = 0.25;
+        if (grams_per_mile > table_value)
+        {
+            cout << "Emissions exceed permitted level of 0.25 grams/mile" << endl;
+        }
+        else
+            cout << "Looks like you're good" << endl;
+    }
+    else if (pollutant == '1' && odometer_reading > 50000)
+    {
+        table_value = 4.2;
+        if(grams_per_mile > 4.2)
+        {
+            cout << "Emissions exceed permitted level of 4.2 grams/mile" << endl;
+        }
+        else
+            cout << "Looks like you're good" << endl;
+    }
+    else if (pollutant == '2' && odometer_reading > 50000)
+    {
+        table_value = 0.39;
+        if (grams_per_mile > table_value)
+        {
+            cout << "Emissions exceed permitted level of 0.39 grams/mile" << endl;
+        }
+        else
+            cout << "Looks like you're good" << endl;
+    }
+    else if (pollutant == '3' && odometer_reading > 50000)
+    {
+        table_value = 0.5;
+        if (grams_per_mile > table_value)
+        {
+            cout << "Emissions exceed permitted level of 0.5 grams/mile" << endl;
+        }
+        else
+            cout << "Looks like you're good" << endl;
+    }
+    else if (pollutant == '4' && odometer_reading > 50000)
+    {
+        table_value = 0.31;
+        if (grams_per_mile > table_value)
+        {
+            cout << "Emissions exceed permitted level of 0.31 grams/mile" << endl;
+        }
+        else
+            cout << "Looks like you're good" << endl;
+    }
+    else
+        cout << "Wrong Entry" << endl;
+
+    return 0;
+}
