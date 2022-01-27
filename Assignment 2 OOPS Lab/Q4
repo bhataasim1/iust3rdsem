@@ -1,0 +1,55 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    float x, y;
+    cout << "Enter the Value of X-axis : ";
+    cin >> x;
+    
+    cout << "Enter the Value of Y-axis : ";
+    cin >> y;
+    
+    if (x > 0 && y > 0)
+    {
+        cout << "Lies in first Quadrant";
+    }
+    else if ( x < 0 && y > 0)
+    {
+        cout << "Lies in Second Quadrant";
+    }
+    else if (x < 0 && y < 0)
+    {
+        cout << "Lies in Third Quadrant";
+    }
+    else if (x > 0 && y < 0)
+    {
+        cout << "Lies in Fourth Quadrant";
+    }
+    else if ( x == 0 && y == 0)
+    {
+        cout << "Lies at Origin";
+    }
+    else if (x == 0 && y > 0)
+    {
+        cout << "Lies at Positive Y-axis";
+    }
+    else if (x > 0 && y == 0)
+    {
+        cout << "Lies in Positive X-axis";
+    }
+    else if (x == 0 && y < 0)
+    {
+        cout << "Lies at Negative Y-axis";
+    }
+    else if (x < 0 && y == 0)
+    {
+        cout << "Lies at Negative X-axis";
+    }
+    else 
+     cout << "Wrong Entry";
+    
+    
+    return 0;
+}
