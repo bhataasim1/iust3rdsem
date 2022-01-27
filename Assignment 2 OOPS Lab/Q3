@@ -1,0 +1,50 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    float n;
+    const int a = 0;
+    const int b = 1;
+    const int c = 2;
+    const int d = 3;
+    const int e = 4;
+    cout << "Enter the Earthquake Value : ";
+    cin >> n;
+    
+    if (n < 5.0) n = a;
+    else if (n >= 5.0 && n < 5.5) n = b;               
+    else if (n >= 5.5 && n < 6.5) n = c;              
+    else if (n >= 6.5 && n < 7.5) n = d;
+    else n = e;
+    
+    switch ((int)n)
+    {
+        case a:
+        cout << "Little or No Damage" << endl;
+        break;
+        
+        case b:
+        cout << "Some Damage" << endl;
+        break;
+        
+        case c:
+        cout << "Serious damage: walls may crack or fall" << endl;
+        break;
+        
+        case d:
+        cout << "Disaster: houses and buildings may collapse";
+        break;
+        
+        case e:
+        cout << "Catastrophe: most buildings destroyed";
+        break;
+        
+        default:
+        cout << "Wrong Entry";
+    }
+    
+
+    return 0;
+}
