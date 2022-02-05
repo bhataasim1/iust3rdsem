@@ -9,3 +9,5 @@
 3) Write a function called _zeroSmaller()_ that is passed two int arguments by reference and then sets the smaller of the two numbers to 0. Write a _main()_ program to exercise this function.
 
 4) Write a function that takes two Distance values as arguments and returns the larger one. Include a *_main()_* program that accepts two Distance values from the user, compares them, and displays the larger. (See the RETSTRC program for hints.)
+
+5) Write a function called _hms_to_secs()_ that takes three int values—for _hours, minutes, and seconds_ —as arguments, and returns the equivalent time in _seconds (type long)_. Create a program that exercises this function by repeatedly obtaining a time value in hours, minutes, and seconds from the user (_format 12:59:59_), calling the function, and displaying the value of _seconds_ it returns.
