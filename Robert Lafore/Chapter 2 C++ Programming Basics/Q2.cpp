@@ -1,3 +1,12 @@
+/*
+Write a program that generates the following table:
+1990   135
+1991  7290
+1992 11300
+1993 16200
+Use a single cout statement for all output.
+*/
+
 #include <iostream>
 #include <iomanip>
 
