@@ -10,38 +10,42 @@ using namespace std;
 class Distance
 {
     private:
-        int feet , inches;
+        float feet , inches;
     public:
+        Distance(float feet , float inches) : feet(feet) , inches(inches){}
         
-        void get_distance()
+        float getFeet()
         {
-            cout << "Enter the Feet : ";
-            cin >> feet;
-            cout << "Enter the Inches : ";
-            cin >> inches;
+            return feet;
+        }
+        float getInches()
+        {
+            return inches;
         }
         
-        void add_distance(Distance d1 , Distance d2)
+        void add_distance(Distance d)
         {
-            feet = d1.feet + d2.feet;
-            inches = d1.inches + d2.inches;
-            feet = feet + (inches / 12);
-            inches = inches % 12;
+            feet += d.getFeet();
+            inches += d.getInches();
         }
         
         void display_distance()
         {
-            cout << "Feet = " << feet << " Inches = " << inches;
+            cout <<" Feet = " << feet << "\n " << "Inches = " << inches << endl;
         }
 };
 
 int main()
 {
-    Distance d1 , d2 , d3;
-    d1.get_distance();
-    d2.get_distance();
-    d3.add_distance(d1 , d2);
-    d3.display_distance();
+    Distance d1(5.7  , 8.4);
+    d1.display_distance();
+    
+    Distance d2(4.8 , 9.7);
+    d2.display_distance();
+    
+    cout << "\n Adding d2 to d1" << endl;
+    d1.add_distance(d2);
+    d1.display_distance();
 
     return 0;
 }
