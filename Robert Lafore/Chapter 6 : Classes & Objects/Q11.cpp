@@ -7,7 +7,7 @@ that will reduce the fraction object of which it is a member to lowest terms. It
 greatest common divisor (gcd) of the fraction’s numerator and denominator, and uses this
 gcd to divide both numbers.
 
-
+<pre>
 void Fraction::lowterms() // change ourself to lowest terms
 {
     long tnum, tden, temp, gcd;
@@ -39,6 +39,7 @@ void Fraction::lowterms() // change ourself to lowest terms
     numerator = numerator / gcd; // divide both num and den by gcd
     denominator = denominator / gcd; // to reduce frac to lowest terms
 }
+</pre>
 
 You can call this function at the end of each arithmetic function, or just before you perform output. You’ll also need the usual member functions: four arithmetic operations,
 input, and display. You may find a two-argument constructor useful.
