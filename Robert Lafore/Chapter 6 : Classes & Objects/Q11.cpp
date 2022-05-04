@@ -7,33 +7,43 @@ that will reduce the fraction object of which it is a member to lowest terms. It
 greatest common divisor (gcd) of the fraction’s numerator and denominator, and uses this
 gcd to divide both numbers.
 
-```
-```
-void fraction::lowterms() // change ourself to lowest terms
+
+void Fraction::lowterms() // change ourself to lowest terms
 {
-long tnum, tden, temp, gcd;
-tnum = labs(num); // use non-negative copies
-tden = labs(den); // (needs cmath)
-if(tden==0 ) // check for n/0
-{ cout << “Illegal fraction: division by 0”; exit(1); }
-else if( tnum==0 ) // check for 0/n
-{ num=0; den = 1; return; }
-// this ‘while’ loop finds the gcd of tnum and tden
-while(tnum != 0)
-{
-if(tnum < tden) // ensure numerator larger
-{ temp=tnum; tnum=tden; tden=temp; } // swap them
-tnum = tnum - tden; // subtract them
+    long tnum, tden, temp, gcd;
+    tnum = labs(numerator); // use non-negative copies
+    tden = labs(denominator); // (needs cmath)
+    if (tden == 0)    // check for n/0
+    {
+        cout << "Illegal fraction : division by 0";
+        exit(1);
+    }
+    else if (tnum == 0) // check for 0/n
+    {
+        numerator = 0;
+        denominator = 1;
+        return;
+    }
+    // this ‘while’ loop finds the gcd of tnum and tden
+    while (tnum != 0)
+    {
+        if (tnum < tden) // ensure numerator larger
+        {
+            temp = tnum;
+            tnum = tden;
+            tden = temp;
+        }                   // swap them
+        tnum = tnum - tden; // subtract them
+    }
+    gcd = tden;      // this is greatest common divisor
+    numerator = numerator / gcd; // divide both num and den by gcd
+    denominator = denominator / gcd; // to reduce frac to lowest terms
 }
-gcd = tden; // this is greatest common divisor
-num = num / gcd; // divide both num and den by gcd
-den = den / gcd; // to reduce frac to lowest terms
-}
-```
-```
+
 You can call this function at the end of each arithmetic function, or just before you perform output. You’ll also need the usual member functions: four arithmetic operations,
 input, and display. You may find a two-argument constructor useful.
 */
+
 
 #include <iostream>
 #include<cmath>
